@@ -1,0 +1,121 @@
+:root{
+    --main-bg-color:#2e2e2e;
+    --main-color: #a701a7;
+    --main-acent-color: #ffffff;
+}
+
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+header{
+    text-align: center;
+    color: var(--main-color);
+}
+/* styling for text under header */
+.text-centered{
+    color: var(--main-acent-color);
+    text-align: center;    
+    max-width: 996px;
+    /* font-weight: bolder; */
+    margin: auto;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--main-bg-color);
+}    
+footer {
+    text-align: center;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+.label {
+    font-size: 1.2rem;
+    /* font-weight: bolder; */
+}
+
+.card {
+    
+    margin: 1rem;
+    padding-bottom: 1rem;
+    min-width: 330px;
+    
+    /* background-color: #eaeae8; */
+      
+    border: dashed 2px var(--main-acent-color);
+    /* border-radius: 10px; */
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
+}
+.card .label {
+    margin-left: 10px;
+    font-size: 16px;
+    color:var(--main-color);
+}
+
+/* styling of Content that will be copied */
+.card .card-content {
+    text-align: none;
+    line-height: 1.5;
+    /* background: linear-gradient(var(--main-bg-color),var(--main-color));  */
+    background-color: var(--main-color);
+    /* font-weight: bolder; */
+    position: relative;
+    height: 100%;
+    color: var(--main-acent-color);
+    border-radius: 5px;
+    margin: auto 12px;
+    padding: 10px;
+}
+
+/* styling and placement for title on box */
+.card h3 {
+    background-color: var(--main-bg-color);
+    border: var(--main-acent-color) 2px solid;
+    color: var(--main-color);
+    width: 75%;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 0 0 15px;
+    border-radius: 5px;    
+    position: relative;
+    top: -15px;
+}
+
+i {
+    font-size: 2.2rem;
+    color: var(--main-acent-color);
+}
+.cards-container {
+    height: auto;
+   
+    flex-wrap: wrap;
+}
+
+/*  Display two cards per row at 576px breakpoint */
+@media (min-width: 576px) {
+
+    .cards-container  {
+/*  Set the display for the outer container to flex */
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* align-items: center; */
+    justify-content: space-around;
+    }
+
+    .card {
+        /*  Set the flex-basis so that two cards are displayed in each row. */
+       
+        flex-basis: 0;
+    }
+}
+
+/*  Display four cards across one row at 992px breakpoint */
+@media (min-width: 992px) {
+
+    .card {
+        /*  Set the flex-basis so four cards are displayed across one row. */
+        flex-basis: 0;
+    }
+}

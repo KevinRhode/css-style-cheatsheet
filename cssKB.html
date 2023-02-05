@@ -4,25 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Module 2 - Mini Project</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <header>
         <!-- css snippet cheat sheet -->
+        <h1>CSS Snippet Cheatsheet</h1>
     </header>
-    <details>
+    <div class="text-centered">
+        <p class="sub-header-desc"> 
+            Ever have trouble recalling the exavt syntac for your favorite CSS code?
+            Give it a permanent home and add it to this page! Select any snippet below 
+            and it'll automactically select all of the code for you to copy            
+        </p>
+    </div>
         <!-- phrase to need a cheat sheet -->
-    </details>
+
     <main>
-        <div class="centered">
-            <section class="cards">
-                <article class="card">
-                    <p>content</p>
-                </article>
-            </section>
-        </div>        
+        
+        <section id="cards">
+            <div class="cards-container">
+            
+                <div class="card" id="flexbox-row">
+                    <h3>Flexbox Row</h3>                
+                    <p class="label">Use these three properties to create a Flexbox row layout</p>
+                    <pre class="card-content">.row { 
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+    }</pre></div>
+                  <div class="card" id="flexbox-column">
+                    <h3>Flexbox Column</h3>                
+                    <p class="label">Use this to create a Flexbox column layout</p>
+                    <pre class="card-content">.column { 
+                display: flex;
+                flex-direction: column;
+    }</pre>
+                  </div>
+                  <div class="card" id="css-grid-layout">
+                    <h3>CSS Grid Layout</h3>                
+                    <p class="label">Build a 12-column layout using CSS Grid</p>
+                    <pre class="card-content">.grid { 
+                display: grid;
+                width: 100%;
+                grid-template-columns:
+    repeat(12, 1fr);
+    }</pre>
+                  </div>
+                
+              <div class="card" id="linear-gradients">
+                <h3>Linear Gradients</h3>                
+                <p class="label">This will create a background linear gradient from top to bottom</p>
+                <pre class="card-content">.linear-gradient-background { 
+            background-image: linear-gradient(
+                rba(232, 182, 0.3) 0%,
+                rba(232, 182, 0.6) 100%
+            );
+}</pre>
+              </div>
+              <div class="card" id="box-transition-glow">
+                <h3>Box Transition Glow</h3>                
+                <p class="label">Use transition and box shoadows to glow on hover</p>
+                <pre class="card-content">.code-card .card-header { 
+            border-radius: 8px;
+            transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover,
+.code-card:hover .card-header{
+    box-shadow: inset 0px 0px 8px
+    rgba(232, 182, 236, 1), 0 0 15px
+    rgba(232, 102, 236, 1);
+    }</pre>
+              </div>
+            
+              <div class="card" id="overlay-card-with-title">
+                <h3>Overlay Card with Title</h3>                
+                <p class="label">Use position perperties and negative margins to raise elements higher than theri natural starting point</p>
+                <pre class="card-content">.card-header { 
+            position: relative;
+            marigin-top: -20px;
+}</pre>
+            </div>
+        </div>
+            </div>
+
+              
+          </section>      
     </main>
     <footer>
+        <h2>Made with ❤️️ by Kevin</h2>
+        <p>
+            &copy; Sarcasmo Solutions, Inc.
+        </p>
     </footer>    
+    
+
+
 </body>
 </html>
+
+<!-- https://blog.avada.io/css/card-layouts#responsive-card-layout-megan -->
