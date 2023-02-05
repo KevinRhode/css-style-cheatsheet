@@ -36,6 +36,12 @@ h3 {
     /* font-weight: bolder; */
 }
 
+.cards-container{
+    max-width: 1235px;
+    margin: auto;
+    /* justify-content: center; */
+}
+
 .card {
     
     margin: 1rem;
