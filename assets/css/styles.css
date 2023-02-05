@@ -1,6 +1,7 @@
 :root{
     --main-bg-color:#2e2e2e;
     --main-color: #a701a7;
+    --main-color-offset:#680268;
     --main-acent-color: #ffffff;
 }
 
@@ -39,7 +40,7 @@ h3 {
     
     margin: 1rem;
     padding-bottom: 1rem;
-    min-width: 330px;
+    min-width: 283px;
     
     /* background-color: #eaeae8; */
       
@@ -57,15 +58,21 @@ h3 {
 .card .card-content {
     text-align: none;
     line-height: 1.5;
-    /* background: linear-gradient(var(--main-bg-color),var(--main-color));  */
+    background: linear-gradient(var(--main-color-offset),var(--main-color)); 
     background-color: var(--main-color);
     /* font-weight: bolder; */
+    
     position: relative;
     height: 100%;
     color: var(--main-acent-color);
     border-radius: 5px;
     margin: auto 12px;
     padding: 10px;
+    
+}
+
+.card .card-content  {
+    user-select: all;
 }
 .card .cardcontentfiller{
     background-color: var(--main-color);
@@ -84,12 +91,20 @@ h3 {
     border-radius: 5px;    
     position: relative;
     top: -15px;
+    
+}
+.card:hover h3 {
+    
+    transition: all 2s;
+    
+
 }
 
 i {
     font-size: 2.2rem;
     color: var(--main-acent-color);
 }
+/* styling needed to have card content fill */
 .card {
     display: flex;
     flex-direction: column;
